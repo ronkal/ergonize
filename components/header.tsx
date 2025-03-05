@@ -5,7 +5,7 @@ import { NavigationItem } from "@/types/navigation";
 const items: NavigationItem[] = [
   {
     title: "Source Code",
-    url: "#",
+    url: "https://www.github.com/ronkal/ergonize",
   },
   {
     title: "About",
