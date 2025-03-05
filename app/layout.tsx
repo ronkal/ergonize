@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import AppSidebar from "@/components/sidebar";
 import { SidebarTrigger, SidebarProvider } from "@/components/ui/sidebar";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Ergonize",
@@ -16,11 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SidebarProvider>
+        <SidebarProvider defaultOpen={false}>
           <AppSidebar />
-          <main className="flex flex-col">
+          <main className="flex w-screen flex-col">
+            <Header />
             <div className="flex items-start">
-              <SidebarTrigger className="mr-4" />
+              <SidebarTrigger />
               {children}
             </div>
           </main>
