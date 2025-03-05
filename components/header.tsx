@@ -6,6 +6,7 @@ const items: NavigationItem[] = [
   {
     title: "Source Code",
     url: "https://www.github.com/ronkal/ergonize",
+    target: "_blank"
   },
   {
     title: "About",
@@ -28,7 +29,7 @@ export default function Header() {
           <ul className="flex flex-row gap-4">
             {items.map((item) => (
               <li key={item.title}>
-                <a href={item.url}>{item.title}</a>
+                <a href={item.url} target={item.target}>{item.title}</a>
               </li>
             ))}
           </ul>

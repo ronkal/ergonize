@@ -12,6 +12,7 @@ type IconizedItem = {
 type NavigationItem = {
   title: string;
   url: string;
+  target?: "_self" | "_blank" | "_parent" | "_top" | "_unfencedTop";
 };
 
 export type { IconizedItem, NavigationItem };
