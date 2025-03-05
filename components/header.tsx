@@ -34,7 +34,7 @@ export default function Header() {
           </ul>
         </nav>
         <div className="flex gap-4">
-          <Button variant="secondary">Register</Button>
+          <Button variant="outline">Register</Button>
           <Button variant="default">Log in</Button>
         </div>
       </div>
