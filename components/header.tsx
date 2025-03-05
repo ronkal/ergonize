@@ -1,4 +1,21 @@
 import { Button } from "@/components/ui/button";
+import { NavigationItem } from "@/types/navigation";
+
+// Navbar items.
+const items: NavigationItem[] = [
+  {
+    title: "Source Code",
+    url: "#",
+  },
+  {
+    title: "About",
+    url: "#",
+  },
+  {
+    title: "License",
+    url: "#",
+  },
+];
 
 export default function Header() {
   return (
@@ -9,15 +26,11 @@ export default function Header() {
         </a>
         <nav className="hidden sm:inline">
           <ul className="flex flex-row gap-4">
-            <li>
-              <a href="#">Source Code</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">License</a>
-            </li>
+            {items.map((item) => (
+              <li key={item.title}>
+                <a href={item.url}>{item.title}</a>
+              </li>
+            ))}
           </ul>
         </nav>
         <div className="flex gap-4">

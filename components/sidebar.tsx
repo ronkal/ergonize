@@ -10,19 +10,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Calendar, Home, LucideProps, Search, Settings } from "lucide-react";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
-
-type NavigationItems = {
-  title: string;
-  url: string;
-  icon: ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-  >;
-};
+import { IconizedItem } from "@/types/navigation";
+import { Calendar, Home, Search, Settings } from "lucide-react";
 
 // Menu items.
-const items: NavigationItems[] = [
+const items: IconizedItem[] = [
   {
     title: "Home",
     url: "#",
@@ -44,6 +36,7 @@ const items: NavigationItems[] = [
     icon: Settings,
   },
 ];
+
 export default function AppSidebar() {
   return (
     <Sidebar>
