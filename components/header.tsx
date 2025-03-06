@@ -22,16 +22,16 @@ const items: NavigationItem[] = [
 export default function Header() {
   return (
     <header className="border-border border-b px-4 py-2">
-      <div className="text-sidebar-foreground mx-auto flex max-w-7xl items-center justify-between">
+      <div className="text-sidebar-foreground mx-auto flex max-w-7xl items-center justify-between gap-2">
         <Link href="/" className="text-2xl font-bold">
           Ergonize
         </Link>
-        <nav className="hidden sm:inline">
-          <ul className="flex flex-row gap-4">
+        <nav className="hidden md:inline">
+          <ul className="flex flex-row gap-2">
             {items.map((item) => (
               <li key={item.title}>
                 <Link
-                  className="hover:underline"
+                  className="hover:underline text-nowrap text-sm lg:text-lg"
                   href={item.url}
                   target={item.target}>
                   {item.title}
@@ -40,7 +40,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <div className="flex gap-4">
+        <div className="flex gap-2">
           <Button variant="outline">Register</Button>
           <Button variant="default">Log in</Button>
         </div>
