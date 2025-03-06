@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { NavigationItem } from "@/types/navigation";
+import Link from "next/link";
 
 // Navbar items.
 const items: NavigationItem[] = [
@@ -22,16 +23,19 @@ export default function Header() {
   return (
     <header className="border-border border-b px-4 py-2">
       <div className="text-sidebar-foreground mx-auto flex max-w-7xl items-center justify-between">
-        <a href="#" className="text-2xl font-bold">
+        <Link href="/" className="text-2xl font-bold">
           Ergonize
-        </a>
+        </Link>
         <nav className="hidden sm:inline">
           <ul className="flex flex-row gap-4">
             {items.map((item) => (
               <li key={item.title}>
-                <a className="hover:underline" href={item.url} target={item.target}>
+                <Link
+                  className="hover:underline"
+                  href={item.url}
+                  target={item.target}>
                   {item.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

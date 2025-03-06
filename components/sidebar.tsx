@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sidebar";
 import { IconizedItem } from "@/types/navigation";
 import { Calendar, Home, Search, Settings } from "lucide-react";
+import Link from "next/link";
 
 // Menu items.
 const items: IconizedItem[] = [
@@ -43,9 +44,9 @@ export default function AppSidebar() {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <a href="/" className="text-xl font-bold">
+            <Link href="/" className="text-xl font-bold">
               Ergonize
-            </a>
+            </Link>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
@@ -57,10 +58,10 @@ export default function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
