@@ -29,7 +29,7 @@ export default function Header() {
           <ul className="flex flex-row gap-4">
             {items.map((item) => (
               <li key={item.title}>
-                <a href={item.url} target={item.target}>
+                <a className="hover:underline" href={item.url} target={item.target}>
                   {item.title}
                 </a>
               </li>
