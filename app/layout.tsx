@@ -23,7 +23,9 @@ export default function RootLayout({
             <Header />
             <div className="flex flex-1 gap-1 overflow-auto p-1">
               <SidebarTrigger className="h-full" />
-              {children}
+              <div className="border-border h-full w-full rounded border">
+                {children}
+              </div>
             </div>
           </main>
         </SidebarProvider>
