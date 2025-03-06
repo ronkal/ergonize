@@ -21,8 +21,8 @@ export default function RootLayout({
           <AppSidebar />
           <main className="flex w-screen flex-col">
             <Header />
-            <div className="flex items-start">
-              <SidebarTrigger />
+            <div className="flex flex-1 gap-1 overflow-auto p-1">
+              <SidebarTrigger className="h-full" />
               {children}
             </div>
           </main>
