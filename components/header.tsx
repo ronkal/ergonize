@@ -20,8 +20,8 @@ const items: NavigationItem[] = [
 
 export default function Header() {
   return (
-    <header className="border-b-2 border-black px-4 py-2">
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
+    <header className="border-border border-b px-4 py-2">
+      <div className="text-sidebar-foreground mx-auto flex max-w-7xl items-center justify-between">
         <a href="#" className="text-2xl font-bold">
           Ergonize
         </a>
