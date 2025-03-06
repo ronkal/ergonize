@@ -19,11 +19,11 @@ export default function RootLayout({
       <body>
         <SidebarProvider defaultOpen={false}>
           <AppSidebar />
-          <main className="flex w-screen flex-col">
+          <main className="flex w-screen h-screen flex-col">
             <Header />
             <div className="flex flex-1 gap-1 overflow-auto p-1">
               <SidebarTrigger className="h-full" />
-              <div className="border-border h-full w-full rounded border">
+              <div className="border-border h-full w-full overflow-auto rounded border">
                 {children}
               </div>
             </div>
